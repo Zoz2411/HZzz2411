@@ -1,0 +1,57 @@
+def dodo_assistant():
+    print("أهلاً بيك في مساعد Dodo الذكي!")
+    while True:
+        user_input = input("أمرك يا باشا: ").lower()
+
+        if "ازايك" in user_input:
+            print("أنا بخير طول ما Dodo بخير!")
+
+        elif "بحبك" in user_input:
+            print("وأنا كمان بحبك يا ديدو من قلبي!")
+
+        elif "اجمع" in user_input:
+            try:
+                numbers = user_input.split()
+                result = int(numbers[-2]) + int(numbers[-1])
+                print(f"النتيجة: {result}")
+            except:
+                print("اكتب بصيغة: اجمع 5 7")
+
+        elif "اطرح" in user_input:
+            try:
+                numbers = user_input.split()
+                result = int(numbers[-2]) - int(numbers[-1])
+                print(f"النتيجة: {result}")
+            except:
+                print("اكتب بصيغة: اطرح 10 3")
+
+        elif "اضرب" in user_input:
+            try:
+                numbers = user_input.split()
+                result = int(numbers[-2]) * int(numbers[-1])
+                print(f"النتيجة: {result}")
+            except:
+                print("اكتب بصيغة: اضرب 3 4")
+
+        elif "اقسم" in user_input:
+            try:
+                numbers = user_input.split()
+                result = int(numbers[-2]) / int(numbers[-1])
+                print(f"النتيجة: {result}")
+            except:
+                print("اكتب بصيغة: اقسم 10 2")
+
+        elif "مين رئيس مصر" in user_input:
+            print("الرئيس عبد الفتاح السيسي.")
+
+        elif "يعني ايه ذكاء اصطناعي" in user_input:
+            print("الذكاء الاصطناعي هو قدرة الآلة على محاكاة الذكاء البشري في التفكير والتعلم.")
+
+        elif "خروج" in user_input or "انهاء" in user_input:
+            print("مع السلامة يا ديدو، هتوحشني!")
+            break
+
+        else:
+            print("مش فاهم قصدك، جرب تقوللي بطريقة تانية.")
+
+dodo_assistant()
